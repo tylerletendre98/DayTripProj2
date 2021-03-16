@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 let transportation = ['driving a car','riding a bike','flying a plane','walking','riding the bus'];
 let destinations = ['chilis','the beach','a bowling alley', 'a concert'];
 let entertainment = ['listening to music',' playing video games','reading a book','watching a movie'];

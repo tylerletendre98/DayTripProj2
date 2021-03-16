@@ -1,7 +1,8 @@
-"use strict"
+"use strict";
 let modesOfTransportation = ['driving a car','riding a bike','flying a plane','walking','riding the bus'];
-let differentDestinations = ['chilis','the beach','a bowling alley', 'a concert'];
+let differentDestinations = ['the beach','a bowling alley', 'a concert'];
 let typesOfEntertainment = ['listening to music',' playing video games','reading a book','watching a movie'];
+let differentRestaurants = ['chilis','buffalo wild wings','TGI Fridays','Wendys','Ihop']
 let dayTrip = []
 
 function getRandomSelection(array){
@@ -47,8 +48,15 @@ let entertainment = getRandomSelection(typesOfEntertainment);
     else if(userInput == "yes"){
         dayTrip.push(entertainment);
     }
-console.log("Your transportation will be "+ dayTrip[0]+". Your destination will be "+dayTrip[1]+" your entertainment during transit will be "+dayTrip[2]+".");
-
+let resturant  = getRandomSelection(differentRestaurants);
+    userInput = prompt("did you like your selection? enter yes or no")
+    if (userInput !== "yes"){
+        let anotherSelection = generateAnotherSelection(differentRestaurants);
+    }
+    else if(userInput == "yes"){
+        dayTrip.push(resturant);
+    }
+console.log("Your transportation will be "+ dayTrip[0]+". Your destination will be "+dayTrip[1]+" your entertainment during transit will be "+dayTrip[2]+". Lastly the restuarant you will be going to will be "+dayTrip[3]+".");
 
 
 
