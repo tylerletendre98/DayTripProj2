@@ -5,17 +5,17 @@ let entertainment = ['listening to music',' playing video games','reading a book
 let dayTrip = []
 
 function getRandomTransportation(array){
-    let randomTransportation = array[Math.floor(Math.random()* array.length)];
+    let randomTransportation = array[Math.floor(Math.random()* array.length)];// riding a bike
     alert(randomTransportation);
-    let userInput = prompt("Please write yes or no to keep this transportation");
+    let userInput = prompt("Please write yes or no to keep this transportation");//no
     if (userInput == "yes"){
         dayTrip.push(randomTransportation)
     }
     else if (userInput !== "yes"){
         while(userInput !== "yes"){
-            randomTransportation = array[Math.floor(Math.random()* array.length)];
+            randomTransportation = array[Math.floor(Math.random()* array.length)];// driving a car
             alert(randomTransportation);
-            userInput = prompt("do you want to keep this entertainment yes or no?");
+            userInput = prompt("do you want to keep this transportation yes or no?");
             if (userInput== "yes"){
             dayTrip.push(randomTransportation);
             } 
