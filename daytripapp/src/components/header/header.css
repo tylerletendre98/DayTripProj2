@@ -1,0 +1,9 @@
+.header {
+  padding: 15px;
+  background-color: navy;
+  color: whitesmoke;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 15px;
+  box-shadow: 4px 3px 8px 1px #969696;
+}
