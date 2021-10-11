@@ -25,12 +25,31 @@ class App extends Component {
       "Wendys",
       "Ihop",
     ],
+    dayTrip:[]
   };
 
+  generateADayTrip=()=>{
+    this.genderateASelection(this.state.modesOfTransportation);
+    this.genderateASelection(this.state.differentDestinations);
+    this.genderateASelection(this.state.typesOfEntertainment);
+    this.genderateASelection(this.state.differentRestaurants);
+    console.log(this.state.dayTrip)
+  }
+
+  genderateASelection=(array)=>{
+    let selection = array[Math.floor(Math.random()*array.length)];
+    alert(`Your selection is ${selection}`);
+    this.state.dayTrip.push(selection);
+  }
   render() {
     return (
       <div className="App">
-        <Header />
+        <div>
+          <Header />
+        </div>
+        <div>
+          <button onClick={this.generateADayTrip}>Click to generate a day trip</button>
+        </div>
       </div>
     );
   }
